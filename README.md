@@ -1,6 +1,13 @@
 # :computer: algorithm-study
 코딩테스트 준비 및 알고리즘 스터디 
 
+## :blush: 스터디원 
+- <a href="https://github.com/chorom-ham">chorom-ham</a>
+- <a href="https://github.com/leeeeeoy">leeeeeoy</a>
+- <a href="https://github.com/WONJUNGHEE">WONJUNGHEE</a>
+- <a href="https://github.com/murane">murane</a>
+
+
 ## 🔥 진행 방식
 - 매주 오프라인 스터디 전까지 선정한 5문제를 풀고 솔루션 소스 코드 파일과 푼 방법 및 새로 배운 내용을 정리한 README(선택 사항)파일을 업로드한다.
 
