@@ -1,5 +1,3 @@
-## 첫 시도 -- 시간 초과
-```cpp
 #include <cstdio>
 #include <queue>
 #include <utility>
@@ -29,22 +27,7 @@ int main() {
 	}
 
 	while (!q.empty()) {
-		//다 익었는지 확인
-		bool success = true;
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < m; j++) {
-				if (arr[i][j] == 0) {
-					success = false;
-				}
-			}
-		}
-
-		if (success) {
-			printf("%d", day);
-			return 0;
-		}
-
-		day++;
+		bool changed = false;
 		int size = q.size();
 		for (int i = 0; i < size; i++) {
 			int x = q.front().first;
@@ -58,16 +41,32 @@ int main() {
 				if (nx >= 0 && ny >= 0 && nx < n && ny < m && arr[nx][ny] == 0 && !visited[nx][ny]) {
 					arr[nx][ny] = 1;
 					q.push({ nx,ny });
+					changed = true;
 				}
+			}
+		}
+		if (!changed) {
+			break;
+		}
+		day++;
+	}
+
+	//다 익었는지 확인
+	bool success = true;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			if (arr[i][j] == 0) {
+				success = false;
 			}
 		}
 	}
 
-	printf("-1");
+	if (success) {
+		printf("%d", day);
+	}
+	else {
+		printf("-1");
+	}
+
 	return 0;
 }
-```
-
-## 두번째 시도
-
-다 익었는지 체크하는 부분을 while문 밖으로 빼서 해결했다.
