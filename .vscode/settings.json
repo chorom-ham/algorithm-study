@@ -1,5 +1,11 @@
 {
     "files.associations": {
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "algorithm": "cpp",
+        "deque": "cpp",
+        "memory": "cpp",
+        "queue": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
     }
 }
